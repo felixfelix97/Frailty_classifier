@@ -1,0 +1,9 @@
+[theme]
+# Primary-button color so "Confirm decision" / "begin case 1" read as "go"
+# rather than Streamlit's default red, which signals danger/stop. Matches
+# experiment_app.py's --cta coral token (its own injected CSS pivoted away
+# from index.html/the deck's navy on 2026-08-25, toward a more game-like
+# clinical palette to fight participant fatigue over a 20-case session).
+# Directory-scoped, so this also applies to streamlit_app.py, which keeps
+# its own plainer look but still benefits from a non-red primary button.
+primaryColor = "#E8672C"

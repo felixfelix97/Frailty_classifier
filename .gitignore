@@ -1,0 +1,33 @@
+# Felix_FrailtyData.csv: removed from tracking again (2026-09-03), same day it
+# was added, after the user reconsidered the license/visibility risk of a
+# public repo. The deployed app now materializes it at runtime from a
+# Streamlit secret instead (see experiment_app.py's "Dataset materialization"
+# block). Untracking here stops it appearing in the current file tree, but it
+# still exists in this repo's git history from the earlier commit; a full
+# purge needs history rewriting (e.g. git filter-repo) if the license
+# question ever comes back negative, not just this line.
+Felix_FrailtyData.csv
+ELSAfrailty_dictionary.csv
+reference/*.pdf
+
+# participant / audit data, never commit real session data
+*.jsonl
+scored_decisions.csv
+session_*.csv
+all_decisions.csv
+all_feedback.csv
+
+# secrets, never commit these
+.streamlit/secrets.toml
+_dataset_secret_DELETE_ME.txt
+
+# generated output, regenerable from code
+benchmark_graphs/
+experiment_materials/*.docx
+*.pkl
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/

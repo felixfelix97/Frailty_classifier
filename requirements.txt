@@ -1,0 +1,18 @@
+# Runtime dependencies for the deployed app (experiment_app.py) only.
+# Benchmarking/reporting/dev-only tools (xgboost, matplotlib, python-docx,
+# playwright, PyMuPDF) are used by local scripts (benchmark_vs_hughes.py,
+# benchmark_graphs.py, frailty_analysis.py, verification scripts) but not by
+# experiment_app.py's own import chain, confirmed 2026-09-03 by checking every
+# module it imports. Install those separately for local dev work on those
+# scripts; they are not needed here and were removed to avoid an
+# unrelated Python-version conflict (xgboost==3.3.0 requires Python>=3.12)
+# blocking deployment on this platform's Python 3.11 runtime.
+pandas==2.3.3
+numpy==2.2.6
+scikit-learn==1.8.0
+catboost==1.2.10
+shap==0.52.0
+streamlit==1.59.0
+scipy==1.17.0
+gspread==6.1.4
+google-auth==2.35.0
